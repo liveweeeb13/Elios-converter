@@ -1,0 +1,36 @@
+{
+  "name": "elios-converter",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "fr.elios.converter",
+    "productName": "Elios Converter BETA v1.0",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "logo.png",
+      "index.html",
+      "app.js",
+      "conversion-longueur.html",
+      "conversion-masse.html",
+      "renderer.js"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "logo.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}

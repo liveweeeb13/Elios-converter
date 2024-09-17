@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elios Converter BETA v1.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .converter {
+            margin: 0 auto;
+            width: 300px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input {
+            box-sizing: border-box;
+        }
+
+        select {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #333 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M3 4l3 3 3-3z" fill="%23fff"/></svg>') no-repeat right 10px center;
+            background-size: 12px 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            border: 1px solid #6200ea;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #03dac5;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            border: 1px solid #03dac5;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #018786; 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Retour à l'accueil</a>
+    <h1>Convertir des Longueurs</h1>
+    <div class="converter">
+        <input type="number" id="inputValue" placeholder="Entrez la valeur">
+        <select id="inputUnit">
+            <option value="mètres">Mètres</option>
+            <option value="kilomètres">Kilomètres</option>
+            <option value="centimètres">Centimètres</option>
+            <option value="millimètres">Millimètres</option>
+            <option value="micromètres">Micromètres</option>
+        </select>
+        <select id="outputUnit">
+            <option value="mètres">Mètres</option>
+            <option value="kilomètres">Kilomètres</option>
+            <option value="centimètres">Centimètres</option>
+            <option value="millimètres">Millimètres</option>
+            <option value="micromètres">Micromètres</option>
+        </select>
+        <button id="convertButton">Convertir</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
